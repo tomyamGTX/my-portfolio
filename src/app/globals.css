@@ -5,13 +5,6 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -23,4 +16,127 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px; /* larger base font */
+  line-height: 1.7;
+  margin: 0;
+}
+
+.markdown {
+  max-width: 1100px;       /* wider content */
+  margin: 0 auto;
+  padding: 2.5rem 1rem;    /* top/bottom spacing for markdown content */
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4 {
+  color: var(--foreground);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.markdown p,
+.markdown ul,
+.markdown ol,
+.markdown blockquote {
+  margin-bottom: 1rem;
+}
+
+.markdown ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.markdown ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+}
+
+.markdown li {
+  margin-bottom: 0.5rem;
+}
+
+/* Inline code */
+.markdown code {
+  background-color: #1e1e1e;   /* light background */
+ color: #d4d4d4;      /* dark text */
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-family: monospace;
+  font-size: 0.95rem;
+}
+
+/* Code blocks */
+.markdown pre {
+  background-color: #1e1e1e;   /* dark background for all code blocks */
+  color: #d4d4d4;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  font-family: "Fira Code", monospace;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Remove inner background for code inside pre */
+.markdown pre code {
+  background: none;
+  color: inherit;
+}
+
+/* Optional: bash/terminal style inside code blocks */
+.markdown pre[class*="language-bash"] {
+  background-color: #1e1e1e;
+  color: #c1e825; /* green-ish like terminal */
+}
+
+.markdown a {
+  color: #c1e425;
+  text-decoration: underline;
+}
+
+.markdown blockquote {
+  border-left: 4px solid #ccc;
+  padding-left: 1rem;
+  color: #666;
+  margin: 1rem 0;
+}
+
+.markdown img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+}
+
+.markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.markdown th,
+.markdown td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.markdown th {
+  background-color: #f2f2f2;
+}
+
+.markdown tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.markdown tr:hover {
+  background-color: #f1f1f1;
+}
+
+.markdown hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 1rem 0;
 }
