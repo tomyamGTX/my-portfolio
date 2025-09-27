@@ -5,22 +5,22 @@ import Link from "next/link";
 export default function ProjectsPage() {
   const projects = [
     {
-      title: "Flutter Quran App",
+      title: "QuranIrab Web App",
       description: "A responsive Quran app with Tajweed & translations.",
-      image: "/project1.jpg",
-      link: "https://yourprojectlink1.com",
+      image: "/no-image.png",
+      link: "https://quranirab.my/",
     },
     {
       title: "Next.js Portfolio",
       description: "My personal portfolio built with Next.js & Tailwind.",
-      image: "/project2.jpg",
-      link: "https://yourprojectlink2.com",
+          image: "/no-image.png",
+      link: "#",
     },
     {
-      title: "TikTok Live Companion",
-      description: "A TikTok live overlay app for VTubers built in Electron.",
-      image: "/project3.jpg",
-      link: "https://yourprojectlink3.com",
+      title: "TikTok Live Overlay",
+      description: "A TikTok live overlay app for streamers with TTS, gift animations, and song request built in Electron.",
+         image: "/no-image.png",
+      link: "#",
     },
   ];
 
